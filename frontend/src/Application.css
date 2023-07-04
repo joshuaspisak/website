@@ -1,0 +1,396 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora&display=swap');
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+    --color-dark: rgb(34,64,58);
+    --color-medium: rgb(59,112,103);
+    --color-light: rgb(91,171,156);
+    --color-accent: rgba(90,117,140,0.9);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-image: url(./images/germany-body-of-water.jpg);
+    background-color:;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--color-dark);
+    font-family: 'Lato', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 0 5%;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    text-align: center;
+    background-color: var(--color-medium);
+    color: var(--color-dark);
+    padding: 1% 1%;
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: var(--color-light);
+    margin: 0;
+  }
+  main {
+    background-color: var(--color-accent);
+    padding: 3%;
+    margin: 0;
+  }
+  section {}
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    color: var(--color-light);
+    text-align: center;
+    background-color: var(--color-medium);
+    border: 3px solid var(--color-dark);
+    margin: 0;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align: center;
+    background-color: var(--color-accent);
+    padding: 15px;
+    border: 5px solid var(--color-light);
+    border-top: 0px;
+    margin: 0;
+  }
+  nav a {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    margin: 5px;
+    padding: 9px 15px;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    background-color: var(--color-light);
+    color: var(--color-medium);
+  }
+
+  .local-nav{
+    border: 5px solid var(--color-dark);
+    background-color: var(--color-dark);
+    border-radius: 7px;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-family: 'Lora', serif;
+  } 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {
+    font-weight: bold;
+  }
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    border-collapse: collapse;
+    color: var(--color-dark);
+    margin: 10px;
+    padding: 0px;
+  }
+  caption {
+    background-color: var(--color-dark);
+    border: 1px dashed var(--color-light);
+    order: 1px solid var(--color-dark);
+    color: var(--color-light);
+    margin: 5px;
+    padding: 5px;
+  }
+  thead {
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
+    margin: 0px;
+    padding: 0px;
+  }
+  tbody {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
+    margin: 0px;
+    padding: 0px;
+  }
+  tfoot {}
+  tr {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
+    margin: 0px;
+    padding: 0px;
+  }
+  tr th {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    padding: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    color: var(--color-dark);
+    margin: 0px;
+    padding: 10px;
+  }
+  tr td {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    padding: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    color: var(--color-dark);
+    margin: 0px;
+    padding: 10px;
+  }
+
+  tr:nth-child(odd) td {
+    background-color: var(--color-light);
+  }
+
+  tr:nth-child(even) td {
+    background-color: var(--color-accent);
+  }
+
+  i{
+    padding: 0 10%;
+  }
+
+  colgroup {}
+  data {}
+  datalist {}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /*  ----- Form ----- */
+  form {}
+  fieldset {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+    margin: 0;
+    padding: 25px;
+    border: 5px solid var(--color-dark);
+    flex: 1;
+    margin-right: 20px;
+  }
+    legend {
+      color: var(--color-dark);
+      background-color: var(--color-accent);
+      margin: 5px;
+      padding: 5px;
+      border: 3px solid var(--color-dark);
+      border-bottom: 0px;
+    }
+  label {
+      color: var(--color-dark);
+      background-color: var(--color-accent);
+      margin: 0;
+      padding: 0;
+      border: 0px;
+  }
+    button {
+      color: var(--color-dark);
+      background-color: var(--color-accent);
+      margin: 0;
+      padding: 5px;
+      border: 3px solid var(--color-light);
+    }
+    button:hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+    input {
+      color: var(--color-light);
+      background-color: var(--color-medium);
+      margin: 3px;
+      padding: 3px;
+      border: 1px solid var(--color-dark);
+    }
+    output {}
+    meter {}
+    progress {}
+    select {
+      color: var(--color-light);
+      background-color: var(--color-medium);
+      margin: 3px;
+      padding: 3px;
+      border: 1px solid var(--color-dark);
+    }
+      optgroup {}
+      option {}
+    textarea {
+      color: var(--color-light);
+      background-color: var(--color-medium);
+      margin: 3px;
+      padding: 3px;
+      border: 1px solid var(--color-dark);
+    }
+
+    :focus{
+      background-color: var(--color-accent);
+      border: 1px solid var(--color-light);
+    }
+
+    ::placeholder{
+      color: var(--color-light);
+    }
+
+    :required{
+      border: 1px solid red;
+    }
+
+    label.required:after{
+      content: "*";
+      color: red;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  
+  /* ----- Media ----- */
+  figure {
+    background-color: var(--color-light);
+    border-radius: 15px;
+    padding: 25px;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    display: block;
+    max-width: 100%;
+  }
+    figcaption {}
+    figure img {
+        max-width: 525px;
+    }
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  /* .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-accent);
+    padding: 30px;
+    flex: 1 1 auto;
+    align-items: flex-start;
+  }
+
+  .gallery-h2 {
+    background-color: var(--color-accent);
+    margin: 0;
+    padding: 32px 0 0 0;
+  } */
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
